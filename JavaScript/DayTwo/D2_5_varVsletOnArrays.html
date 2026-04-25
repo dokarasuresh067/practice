@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            var Vs let
+        </title>
+    </head>
+    <style>
+           
+    </style>
+    <body>
+        <div>
+            <input type="text" id="st"  >
+        <button onclick="test()">Enter</button>
+        </div>
+        <div id="ip"></div>
+    </body>
+    <script>
+        function test(){
+            //   Block scopes of var, let , const
+            var fruits=["Banana","Orange"];
+            if(a){
+                var fruits=["kiwi","Orange"];
+                // change of a will be live even after this scope
+                console.log(`In var fruits[0] inside scope is ${fruits[0]}`);
+            }
+            console.log(`In var fruits[0] outside scope is ${fruits[0]}`);
+            
+
+            /* 
+            //Hoisting with var, let , const
+
+            
+            name="suresh";
+            var name;
+            console.log("Name is "+ name);//Hoisting with var is allowed
+
+            
+            let name="suresh";
+          
+            console.log("Name is "+ name);  // let name; hoisting is not allowed in js
+
+            //  * Hoisting wiht const is not allowed bewcause const has to initialized at declaration
+
+           
+
+            // Redeclearation using var, let , const
+
+            var a=10;
+            var a=20; // Redeclearation allowed for var
+            console.log(" Here var is "+20 )
+
+            let a=10;
+            let a=20; // Redeclearation not allowed for let error
+            console.log(" Here var is "+20 )//error
+            
+            const a=10;
+            const a=20; // Redeclearation not allowed for let error
+            console.log(a); //error
+
+            */
+        }
+    </script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Practice</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <h>Live DOM Playground</h>
+    <p style="font-weight: bold;">Enter Text:</p>
+    <input id="ip" type="text",placeholder="Type Something" class=""><br></br>
+    <p style="font-weight: bold;">Choose color:</p>
+    <input type="color" id="colorPicker" value="#000000"><br></br>
+    <p style="font-weight: bold;">Font Size:</p>
+    <select id="fontSize">
+        <option value="16px">Small</option>
+        <option value="24px" selected>Medium</option>
+        <option value="32px">Large</option>
+    </select><br></br>
+    <p id="output" class="item"></p>
+</body>
+<script>
+        const input = document.getElementById("ip");
+        const color = document.getElementById("colorPicker");
+        const font = document.getElementById("fontSize");
+        const output = document.getElementById("output");
+
+        function updateText() {
+            output.textContent = input.value;
+            output.style.color = color.value;
+            output.style.fontSize = font.value;
+        }
+
+        input.addEventListener("input", updateText);
+        color.addEventListener("input", updateText);
+        font.addEventListener("change", updateText);
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+   <style>
+
+   </style>
+   <body>
+        <div>
+            <form action="">
+            <input type="text" id="ip">
+            <input type="button" value="start Now"  onclick="test()">
+        </form>
+        </div>
+        <div id="op"></div>
+        <script>
+          function test(){
+                //var a=document.getElementById("ip"); displays [object HTMLInputElement] 
+                var a=document.getElementById("ip").value;
+                var ans=Math.round((a-2)*(a)/8);
+                document.getElementById("op").innerHTML=ans;
+          }
+        </script>
+   </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOB Checker</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Check DOB Match</h2>
+
+    <input type="date" id="dob1">
+    <input type="date" id="dob2">
+    <br>
+    <button onclick="checkDOB()">Check</button>
+
+    <div id="result"></div>
+
+    <script>
+        const goodArray = [
+            "Perfect Match! ",
+            "Great connection!",
+            "You both are aligned!",
+            "Destiny says YES!",
+            "Wonderful pairing!"
+        ];
+
+        const badArray = [
+            "Not a good match ",
+            "Better luck next time!",
+            "Opposites maybe?",
+            "Things may not work well!",
+            "Try someone else!"
+        ];
+
+        function checkDOB() {
+            const dob1 = document.getElementById("dob1").value;
+            const dob2 = document.getElementById("dob2").value;
+
+            if (!dob1 || !dob2) {
+                document.getElementById("result").innerText = "Please enter both DOBs";
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * goodArray.length);
+
+            if (dob1 === dob2) {
+                document.getElementById("result").innerText = goodArray[randomIndex];
+            } else {
+                document.getElementById("result").innerText = badArray[randomIndex];
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Map</title>
+    </head>
+    <style></style>
+    <body>
+        <div>
+            <input id="ip" type="text"> 
+        <button onclick="display()" >VOTE</button>
+        </div>
+        <div id="res"></div>
+        
+    </body>
+    <script>
+        let arr=document.getElementById('ip').value.split(' ').map(Number);
+        function mySum(total,ele){
+            return total+ele;
+        }
+        function mean(){
+            let sum=arr.reduce(mySum);
+            return sum/(arr.length);
+        }
+        function median(){
+            arr.sort((a,b)=>(a-b));
+            if(arr.length%2===0){
+                return (arr[Math.floor((arr.length-1)/2)]+arr[Math.floor((arr.length)/2)])/2;
+            }
+            else
+            return arr[Math.floor((arr.length)/2)];
+        }
+        function display(){
+            let means=mean();
+            let medians=median();
+            document.getElementById("res").innerHTML="MEAN: "+means+"   "+"MEDIAN: "+medians;
+        }
+        // let arr=[175,50,25];
+        // function subofArray(total ,num){
+        //     return total-num;
+        // }
+        // function myCampus(item){
+        //     console.log(arr.reduceRight(subofArray));
+        // }
+        // myCampus();
+        // let arr=[175,50,25];
+        // function subofArray(total ,num){
+        //     return total-num;
+        // }
+        // function myCampus(item){
+        //     console.log(arr.reduce(subofArray));
+        // }
+        // myCampus();
+        // function canVote(a){
+        //     return a>=18;
+        // }
+        // function test(){
+        //     const list=document.getElementById("ip").value.split(' ').map(Number);
+        //     let voters=list.filter(canVote);
+        //     document.getElementById('res').innerHTML=voters;
+        //    // console.log(voters);
+        // }
+        
+        // function test(){
+        // let l = document.getElementById("ip").value.split(' ').map(Number);
+        // console.log(l);
+        // let result = l.filter(k => k >= 18); // all eligible
+        // console.log(result);
+        // document.getElementById("res").innerHTML = result;
+
+        // }
+        // const names=['suresh','ramesh','dinesh'];
+        // let newNames=names.map(function (val,index){
+        //     return '<li>'+val+'</li>';
+        // });
+        // let render='<ul>'+newNames.join('')+'</ul>';
+        
+    </script>
+</html>

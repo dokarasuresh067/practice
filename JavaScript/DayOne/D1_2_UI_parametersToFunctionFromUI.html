@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+   <style>
+
+   </style>
+   <body>
+        <form action="">
+            <input type="text" id="ip">
+            <input type="button" value="start Now"  onclick="test()">
+            
+        </form>
+        <script>
+          function test(){
+                //var a=document.getElementById("ip"); displays [object HTMLInputElement] 
+                var a=document.getElementById("ip").value; //displays the value entered in the input box
+                alert(a);
+            }
+        </script>
+   </body>
+</html>

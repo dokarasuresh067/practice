@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        const input=[
+            {name:"suresh",age:45},
+            {name:"yuresh",age:85},
+            {name:"gukesh",age:15},
+            {name:"sobesh",age:65},
+            {name:"ganesh",age:55}
+        ];
+        let ages=input.map(i=>i.age);
+        console.log(ages);
+        let mini=Math.min(...ages);
+        let maxi=Math.max(...ages);
+        // let mini=input[0].age,maxi=input[0].age;
+        // for(const person of input){
+        //     mini=Math.min(mini,person.age);
+        //     maxi=Math.max(maxi,person.age);
+        // }
+        console.log(maxi-mini);
+        console.log("Maxi:"+maxi+" "+"Mini:"+mini);
+    </script>
+</html>

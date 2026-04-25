@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Rearrange The String
+        </title>
+    </head>
+    <style>
+           
+    </style>
+    <body>
+        <div>
+            <input type="text" id="st" >
+        <button onclick="sortString()">Enter</button>
+        </div>
+        <div id="ip"></div>
+    </body>
+    <script>
+        function sortString(){
+            let str=document.getElementById("st").value;
+            let str1=str.trim();
+            let strArr=str1.split(" ");
+            strArr.sort();
+            // for(let i=0;i<strArr.length;i++)
+            // {
+            //     for(let j=i+1;j<strArr.length;j++)
+            //     {
+            //         if(strArr[i]>strArr[j])
+            //         {
+            //             let temp=strArr[i];
+            //             strArr[i]=strArr[j];
+            //             strArr[j]=temp;
+            //         }
+            //     }
+            // }
+
+
+             let str4=strArr.join(" ");
+            // for(let i=0;i<strArr.length;i++)
+            // {
+            //     str4+=strArr[i];
+            //     str4+=" ";
+            // }
+            //document.getElementById("ip").innerText="<b>"+str4+"</b>"; not work because it only takes text
+            document.getElementById("ip").innerText=str4;
+
+        }
+    </script>
+</html>

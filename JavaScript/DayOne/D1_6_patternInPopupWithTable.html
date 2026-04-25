@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+   <style>
+
+   </style>
+   <body>
+        <div>
+            <form action="">
+            <input type="text" id="ip">
+            <input type="button" value="start Now"  onclick="test()">
+        </form>
+        </div>
+        <div id="op"></div>
+        <script>
+          function test(){
+                //var a=document.getElementById("ip"); displays [object HTMLInputElement] 
+                var a=document.getElementById("ip").value;
+                var tbegin="<table border=1> <tr><th>SNO<th></tr>";
+                var tend="</table>";
+                var ans="";
+                for(var i=0;i<a;i++)
+                {
+                    ans+="<tr><td>"+i+"</td></tr>";
+                }
+                document.getElementById("op").innerHTML=tbegin+ans+tend;
+          }
+        </script>
+   </body>
+</html>

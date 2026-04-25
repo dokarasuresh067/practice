@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+            <form>
+            <label for="name">First name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="dob">DOB:</label><br>
+            <input type="date" id="dob" name="dob"><br>
+            <label for="branch">Branch:</label><br>
+            <input type="text" id="branch" name="branch"><br>
+            <label>Skills:</label><br>
+            <input type="checkbox" id="cpp" name="cpp" value="cpp">
+            <label for="cpp"> cpp</label><br>
+            <input type="checkbox" id="java" name="java" value="java">
+            <label for="java"> java</label><br>
+            <input type="checkbox" id="python" name="python" value="python">
+            <label for="python"> python</label><br>
+        </form>
+        </div>
+        <div><button onclick="createObject()">ADD</button></div>
+        <div id="op"></div>
+
+    </body>
+
+        <script>
+            function Person(name,dob,branch,skills){
+                this.name=name;
+                this.dob=dob;
+                this.branch=branch;
+                this.skills=skills;
+            }
+            function createObject(){
+                let name=document.getElementById("name").value;
+                let dob=document.getElementById("dob").value;
+                let branch=document.getElementById("branch").value;
+                let skills = [];
+                if(document.getElementById("cpp").checked){
+                    skills.push("cpp");
+                }
+                if(document.getElementById("java").checked){
+                    skills.push("java");
+                }
+                if(document.getElementById("python").checked){
+                    skills.push("python");
+                }
+                const person=new Person(name,dob,branch,skills);
+                document.getElementById("op").innerHTML = `
+                Name: ${person.name} <br>
+                DOB: ${person.dob} <br>
+                Branch: ${person.branch} <br>
+                Skills: ${person.skills}
+                `;
+            }
+        </script>
+</html>

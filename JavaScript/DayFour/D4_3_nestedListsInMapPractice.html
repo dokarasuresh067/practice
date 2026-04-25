@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        const input=[
+            {name:"suresh",marks:[90,85,92]},
+            {name:"yuresh",marks:[75,80,85]},
+            {name:"gukesh",marks:[90,85,95]},
+            {name:"sobesh",marks:[100,100,100]}
+        ];
+        // const stuAvg=input.map(student=>{
+        //     const sum=student.scores.reduce((acc,score)=>acc=score);
+        //     return {name:student.name, average:sum/student.scores.length};
+        // }).filter(student=>student.average>=90);
+        let names=input.map(function(name,marks){
+            let sum=0;
+            for(let i of marks){
+                sum+=i;
+            }
+            if(sum/3>=90)
+            return name;
+        });
+        console.log(names);
+        // check for the corrections
+        
+    </script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+    </style>
+    <body>
+        <div id="demo"></div>
+    </body>
+    <script>
+        let output=document.getElementById("demo");
+        function wishMe(name, callback){
+            console.log("Hello"+" "+name);
+            callback();
+        }
+        //callback function
+        function testCallBack(){
+            console.log('callBack Example');
+        }
+        wishMe('Suresh',testCallBack);
+    </script>
+</html>

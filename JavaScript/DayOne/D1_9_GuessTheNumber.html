@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guessing Game</title>
+    </head>
+    <style></style>
+    <body>
+        <div id="dv">
+            <input id="ip" type="text">
+            <button onclick="Guess()">Guess</button>
+        </div>
+        <div id="dispDiv"></div>
+    </body>
+    <script>
+        const ran=Math.random()*10;
+        var amount=1000;
+        function Guess(){
+            var a=parseInt(document.getElementById("ip").value);
+            if(a==ran){
+                document.getElementById("dispDiv").innerHTML="Successful Guess you Won a amount:  " +amount+"$";
+            }
+            else
+            {
+                amount-=100;
+                document.getElementById("dispDiv").innerHTML="Unsuccessful Guess you remaining amount:  " +amount+"$";
+            }
+        }
+
+    </script>
+</html>
